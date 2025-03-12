@@ -7,11 +7,8 @@ function d6(): number {
 }
 
 export function TwoDice(): React.JSX.Element {
-    let initialLeft = d6();
-    let initialRight = d6();
-    while (initialLeft === initialRight) {
-        initialRight = d6();
-    }
+    let initialLeft = 1;
+    let initialRight = 2;
 
     const [leftDie, setLeftDie] = useState<number>(initialLeft);
     const [rightDie, setRightDie] = useState<number>(initialRight);
